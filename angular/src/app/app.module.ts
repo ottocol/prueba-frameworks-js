@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms'
 
 import { AppComponent } from './app.component';
 import { TarjetaVisitaComponent } from './tarjeta-visita/tarjeta-visita.component';
+import { PuestoService } from './puesto.service'
 
 
 @NgModule({
@@ -15,7 +16,7 @@ import { TarjetaVisitaComponent } from './tarjeta-visita/tarjeta-visita.componen
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [PuestoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { PuestoService } from '../puesto.service'
 
 @Component({
   selector: 'app-tarjeta-visita',
@@ -11,7 +12,7 @@ export class TarjetaVisitaComponent implements OnInit {
   nombre = "Pepe"
   apellidos = "Pérez Marín"
 
-  constructor() {
+  constructor(private puestoService : PuestoService ) {
     
   }
 
@@ -20,7 +21,7 @@ export class TarjetaVisitaComponent implements OnInit {
   }
 
   generarPuesto() {
-    console.log("generar puesto")
+    console.log(this.puestoService.generarPuesto())
   }
 
   ngOnInit() {
