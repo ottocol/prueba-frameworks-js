@@ -11,12 +11,16 @@ export class TarjetaVisitaComponent implements OnInit {
   nombre = "Pepe"
   apellidos = "Pérez Marín"
 
+  constructor() {
+    
+  }
+
   get nombreCompleto() {
     return this.nombre + " " + this.apellidos
   }
 
-  constructor() {
-    
+  generarPuesto() {
+    console.log("generar puesto")
   }
 
   ngOnInit() {
