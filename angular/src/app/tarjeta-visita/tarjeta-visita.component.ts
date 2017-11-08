@@ -9,8 +9,9 @@ import { PuestoService } from '../puesto.service'
 })
 export class TarjetaVisitaComponent implements OnInit {
 
-  nombre = "Pepe"
-  apellidos = "Pérez Marín"
+  nombre = ""
+  apellidos = ""
+  puesto = ""
 
   constructor(private puestoService : PuestoService ) {
     
@@ -21,7 +22,7 @@ export class TarjetaVisitaComponent implements OnInit {
   }
 
   generarPuesto() {
-    console.log(this.puestoService.generarPuesto())
+    this.puestoService.generarPuesto().subscribe(datos=> this.puesto = datos)
   }
 
   ngOnInit() {

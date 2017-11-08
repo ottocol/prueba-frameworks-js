@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { TarjetaVisitaComponent } from './tarjeta-visita/tarjeta-visita.component';
 import { PuestoService } from './puesto.service'
 
+import { HttpClientModule }    from '@angular/common/http';
+
+
 
 @NgModule({
   declarations: [
@@ -14,7 +17,8 @@ import { PuestoService } from './puesto.service'
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [PuestoService],
   bootstrap: [AppComponent]

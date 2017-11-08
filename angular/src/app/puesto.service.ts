@@ -1,14 +1,21 @@
 import { Injectable } from '@angular/core';
+import { HttpClient} from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
+
 
 @Injectable()
 export class PuestoService {
 
-  constructor() { }
+  fakerURL = 'http://faker.hook.io/?property=company.bs'
+
+  constructor(private http: HttpClient) {
+
+  }
 
   puestos = ["Community manager", "Whattefucker in-Chief", "Director of Myselfiness"]
   
-  generarPuesto() {
-    return this.puestos[Math.floor(Math.random()*this.puestos.length)]
+  generarPuesto() : Observable<Object> {
+    return this.http.get(this.fakerURL)
   }
 
 }
