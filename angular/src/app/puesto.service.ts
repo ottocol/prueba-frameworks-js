@@ -6,7 +6,7 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class PuestoService {
 
-  fakerURL = 'http://faker.hook.io/?property=company.bs'
+  fakerURL = 'http://faker.hook.io/?property=company.bs&locale=es'
 
   constructor(private http: HttpClient) {
 
@@ -14,8 +14,8 @@ export class PuestoService {
 
   puestos = ["Community manager", "Whattefucker in-Chief", "Director of Myselfiness"]
   
-  generarPuesto() : Observable<Object> {
-    return this.http.get(this.fakerURL)
+  generarPuesto() : Observable<string> {
+    return this.http.get<string>(this.fakerURL)
   }
 
 }
