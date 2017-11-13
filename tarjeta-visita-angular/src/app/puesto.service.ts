@@ -6,7 +6,7 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class PuestoService {
 
-  fakerURL = 'http://faker.hook.io/?property=company.bs&locale=es'
+  fakerURL = 'https://hook.io/examples/faker?property=company.bs&locale=es'
 
   constructor(private http: HttpClient) {
 
