@@ -1,0 +1,11 @@
+<h2>Lista de personajes</h2>
+<p>Lleva la cuenta de qué personajes siguen vivos en Juego de Tronos.
+   Para cambiar el estado de un personaje haz clic sobre él</p>
+<ul>
+  <li *ngFor="let p of personajes">
+    <app-personaje 
+        [personaje]="p"
+        (onChange)="onChange($event)">
+    </app-personaje>
+  </li>
+</ul>
