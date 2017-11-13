@@ -12,8 +12,6 @@ export class PuestoService {
 
   }
 
-  puestos = ["Community manager", "Whattefucker in-Chief", "Director of Myselfiness"]
-  
   generarPuesto() : Observable<string> {
     return this.http.get<string>(this.fakerURL)
   }
